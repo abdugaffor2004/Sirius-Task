@@ -1,0 +1,50 @@
+.infoBlock {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger-dark);
+  border-radius: 6.25rem;
+  padding: 0.5rem 0.75rem;
+  width: fit-content;
+}
+
+.dropzoneContainer {
+  width: 100%;
+
+  .dropzone {
+    border: 0;
+    border-radius: 1rem;
+    background-color: var(--color-secondary-light);
+    width: 100%;
+    height: 16rem;
+
+    .dropzoneInner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .uploadIcon {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 1rem;
+
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+
+  .dropzoneLabel {
+    font-size: 1.125rem;
+  }
+}
+
+.controlsContainer {
+  margin-top: 6rem;
+
+  .stepCount {
+    font-size: 1rem;
+  }
+}

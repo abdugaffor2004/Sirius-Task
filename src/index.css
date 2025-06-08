@@ -11,7 +11,8 @@
   --color-primary-100: #c7e4fc;
   --color-primary-200: #7abef8;
   --color-primary-300: #45a5f6;
-  --color-secondary: #a0a9b8;
+  --color-secondary-light: #f6f6f8;
+  --color-secondary-dark: #a0a9b8;
   --color-accent-violet: #6447cf;
 
   font-family: 'Varela Round', sans-serif;
