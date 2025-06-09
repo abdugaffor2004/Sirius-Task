@@ -17,6 +17,9 @@ importers:
       '@mantine/hooks':
         specifier: ^8.0.2
         version: 8.0.2(react@19.1.0)
+      '@mantine/nprogress':
+        specifier: ^8.0.2
+        version: 8.0.2(@mantine/core@8.0.2(@mantine/hooks@8.0.2(react@19.1.0))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@mantine/hooks@8.0.2(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@reduxjs/toolkit':
         specifier: ^2.8.2
         version: 2.8.2(react-redux@9.2.0(@types/react@19.1.6)(react@19.1.0)(redux@5.0.1))(react@19.1.0)
@@ -432,6 +435,19 @@ packages:
 
   '@mantine/hooks@8.0.2':
     resolution: {integrity: sha512-0jpEdC0KIAZ54D5kd9rJudrEm6vkvnrL9yYHnkuNbxokXSzDdYA/wpHnKR5WW+u6fW4JF6A6A7gN1vXKeC9MSw==}
+    peerDependencies:
+      react: ^18.x || ^19.x
+
+  '@mantine/nprogress@8.0.2':
+    resolution: {integrity: sha512-d5Cgb7VNKn+MNGdjFqBNrx3K9aj82VqHR44r3fdzJNemEuSpNXalBT0LNHlQDrT9xbbIw1H4Xp30l4sNuXo+RQ==}
+    peerDependencies:
+      '@mantine/core': 8.0.2
+      '@mantine/hooks': 8.0.2
+      react: ^18.x || ^19.x
+      react-dom: ^18.x || ^19.x
+
+  '@mantine/store@8.0.2':
+    resolution: {integrity: sha512-/LuizGWAXjVnLLZ55f0QYotiqb8GlHpIb4KRf4LqRkbsA6UAZEVb6beuk0vI2Azf6vfuh7sTHu1xVC5zI6C+Cw==}
     peerDependencies:
       react: ^18.x || ^19.x
 
@@ -1763,6 +1779,18 @@ snapshots:
       react-dropzone: 14.3.8(react@19.1.0)
 
   '@mantine/hooks@8.0.2(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
+
+  '@mantine/nprogress@8.0.2(@mantine/core@8.0.2(@mantine/hooks@8.0.2(react@19.1.0))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@mantine/hooks@8.0.2(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@mantine/core': 8.0.2(@mantine/hooks@8.0.2(react@19.1.0))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@mantine/hooks': 8.0.2(react@19.1.0)
+      '@mantine/store': 8.0.2(react@19.1.0)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
+  '@mantine/store@8.0.2(react@19.1.0)':
     dependencies:
       react: 19.1.0
 

@@ -24,15 +24,23 @@ import {
   uploadImagesDataAsync,
 } from './redux/slices/imagesSlice';
 import { useState } from 'react';
+import { nprogress } from '@mantine/nprogress';
+import { useNavigate } from 'react-router';
+
+const UPLOAD_FILES_COUNT = 3;
 
 function App() {
+  const navigate = useNavigate();
+  const [files, setFiles] = useState<File[]>([]);
   const dispatch = useDispatch<AppDispatch>();
   const { imagePaths } = useSelector((state: RootState) => state.images);
-  const [files, setFiles] = useState<File[]>([]);
 
   const handleImagesSubmit = () => {
     dispatch(uploadImagesDataAsync(files));
+    nprogress.set(25);
+    navigate('/questionnare');
   };
+
   return (
     <div>
       <Stack gap="1rem">
@@ -176,6 +184,7 @@ function App() {
           radius={100}
           fz={20}
           color="primary"
+          disabled={files.length !== UPLOAD_FILES_COUNT}
           rightSection={<IconArrowRight />}
           onClick={handleImagesSubmit}
         >

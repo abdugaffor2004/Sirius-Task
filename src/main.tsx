@@ -3,12 +3,14 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import '@mantine/core/styles.css';
 import '@mantine/dropzone/styles.css';
+import '@mantine/nprogress/styles.css';
 import App from './App.tsx';
 
 import { createTheme, MantineProvider } from '@mantine/core';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from './redux/store.ts';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import { NavigationProgress } from '@mantine/nprogress';
 
 const theme = createTheme({
   colors: {
@@ -80,6 +82,7 @@ const theme = createTheme({
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MantineProvider theme={theme}>
+      <NavigationProgress />
       <ReduxProvider store={store}>
         <BrowserRouter>
           <Routes>

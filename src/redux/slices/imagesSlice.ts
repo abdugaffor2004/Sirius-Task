@@ -26,7 +26,6 @@ export const imagesSlice = createSlice({
   reducers: {
     setImagesData: (state, action) => {
       state.imagePaths = { ...state.imagePaths, ...action.payload };
-      console.log('fsdf');
     },
   },
 
