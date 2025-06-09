@@ -4,15 +4,6 @@ import {
   IconInfoCircle,
   IconReload,
 } from '@tabler/icons-react';
-import { useState, type FC } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
-import type { AppDispatch, RootState } from '../../redux/store';
-import {
-  setImagesData,
-  uploadImagesDataAsync,
-} from '../../redux/slices/imagesSlice';
-import { nprogress } from '@mantine/nprogress';
 import {
   ActionIcon,
   BackgroundImage,
@@ -24,10 +15,18 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import {
+  setImagesData,
+  uploadImagesDataAsync,
+} from '../../redux/slices/imagesSlice';
+import { useState, type FC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
+import type { AppDispatch, RootState } from '../../redux/store';
+import { nprogress } from '@mantine/nprogress';
 import { Dropzone, IMAGE_MIME_TYPE } from '@mantine/dropzone';
 import classes from './ImageUploadingPage.module.css';
-
-const UPLOAD_FILES_COUNT = 3;
+import { UPLOAD_FILES_COUNT } from '../../constants';
 
 export const ImageUploadingPage: FC = () => {
   const navigate = useNavigate();

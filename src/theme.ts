@@ -1,9 +1,44 @@
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
+  components: {
+    TextInput: {
+      styles: () => ({
+        label: {
+          marginBottom: '0.625rem',
+          fontSize: '1rem',
+        },
+      }),
+    },
+    Textarea: {
+      styles: () => ({
+        label: {
+          marginBottom: '0.625rem',
+          fontSize: '1rem',
+        },
+      }),
+    },
+    DateInput: {
+      styles: () => ({
+        label: {
+          marginBottom: '0.625rem',
+          fontSize: '1rem',
+        },
+      }),
+    },
+    RadioGroup: {
+      styles: () => ({
+        label: {
+          marginBottom: '0.625rem',
+          fontSize: '1rem',
+        },
+      }),
+    },
+  },
+
   colors: {
     danger: [
-      ' #fdeeef',
+      ' #fadee0',
       ' #e12828',
       ' #e12828',
       ' #e12828',
